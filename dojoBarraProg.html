@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- Declara el tipo de documento como HTML5 -->
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--> <!-- Comentarios explicativos -->
+
+<html> <!-- Inicia el elemento HTML -->
+
+<head> <!-- Inicia la sección de cabecera -->
+
+    <title>TODO supply a title</title> <!-- Establece el título de la página -->
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres UTF-8 para el documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define las propiedades de la ventana gráfica del navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define las propiedades de la ventana gráfica del navegador -->
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"
+        data-dojo-config="parseOnLoad:true, async:true"></script> <!-- Incluye la biblioteca Dojo y su configuración -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css">
+    <!-- Incluye la hoja de estilos del tema Claro de Dojo -->
+    <script> // Inicia el bloque de script
+
+        var i = 0; //Declara e inicializa la variable i
+        function cargando() { //Declara la función cargando
+
+            Barra.set({ value: ++i }); // Incrementa el valor de i y establece el valor de la barra de progreso
+            if (i < 10) { //Verifica si el valor de i es menor que 10
+
+                setTimeout(cargando, 100 + Math.floor(Math.random() * 1000));
+                // Si es así, establece un temporizador para llamar recursivamente a la función cargando con un retraso aleatorio
+            }
+        }
+
+    </script> <!-- Finaliza el bloque de script -->
+
+</head> <!-- Finaliza la sección de cabecera -->
+
+<body class="claro"> <!-- Inicia el cuerpo del documento con la clase claro para el estilo -->
+
+    <script> <!-- Inicia el bloque de script -->
+
+        require(["dojo/parser", "dijit/ProgressBar"]);
+    //Requiere la carga de los módulos parser y ProgressBar de Dojo
+
+    </script> <!-- Finaliza el bloque de script -->
+
+    <div data-dojo-type="dijit/ProgressBar" style="width:300px" data-dojo-id="Barra" id="downloadProgress"
+        data-dojo-props="maximum:10"></div> <!-- Define la barra de progreso con la biblioteca Dojo -->
+
+    <input type="button" value="Comenzar!" onclick="cargando();" />
+    <!-- Crea un botón que al hacer clic ejecuta la función cargando -->
+
+</body> <!-- Finaliza el cuerpo del documento -->
+
+</html> <!-- Finaliza el elemento HTML -->

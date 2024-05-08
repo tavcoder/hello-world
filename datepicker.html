@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        #capafecha {
+            position: absolute;
+            width: auto;
+            height: 115px;
+            z-index: 1;
+            left: 240px;
+            top: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            //Código obtenido de datepicker-es.js y que define el control en castellano
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '&#x3c;Ant',
+                nextText: 'Sig&#x3e;',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+                    'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Mi&eacute;rcoles', 'Jueves', 'Viernes',
+                    'S&aacute;bado'],
+                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mi&eacute;', 'Juv', 'Vie', 'S&aacute;b'],
+                dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'S&aacute;'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+            };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+            $('#texto').datepicker(
+                {
+                    onSelect: function (currentText) {
+                        //podemos cambiar currentText por date y obtendremos también la fecha seleccionada
+                        alert(currentText);
+                    }
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="capafecha">
+        <label>Introduzca la Fecha: </label><input type="text" id="texto" />
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+div{
+	border: solid;
+	border-collapse:collapse;
+	border-width: 2px;
+	border-color: #ff889d;
+	color: #812222;
+	font: bold;
+	background-color: #fac2bc;
+ }
+h1{
+	font: sans-serif;
+	font-size: 12pt;
+	color: #ec8200;
+}
+body{
+	background-color: #ffefd5;
+}
+

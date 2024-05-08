@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+<html lang="en"> <!-- Etiqueta raíz del documento, con especificación del idioma -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Especificación del conjunto de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuración de la vista para dispositivos móviles -->
+    <!-- Carga de la biblioteca Dojo -->
+    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"
+        data-dojo-config="parseOnLoad:true, async:true"></script> <!-- Enlace a la biblioteca Dojo -->
+    <!-- Carga de la hoja de estilos del tema Claro de Dojo -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css">
+    <!-- Enlace a la hoja de estilos -->
+    <title>Document</title> <!-- Título del documento -->
+</head>
+
+<body class=”claro”> <!-- Cuerpo del documento con clase de estilo "claro" -->
+    <div data-dojo-type="dijit.MenuBar" id="MenuNav"> <!-- Elemento de menú con la clase MenuBar -->
+        <div data-dojo-type="dijit.PopupMenuBarItem"> <!-- Elemento de menú emergente -->
+            <span>Periódicos</span> <!-- Texto visible del elemento de menú -->
+            <div data-dojo-type="dijit.DropDownMenu" id="Periodicos">
+                <!-- Menú desplegable con identificador "Periodicos" -->
+                <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function()
+        {window.open('http://www.elperiodico.es');}">
+                    <!-- Elemento de menú con función de abrir enlace al periódico "El Periódico" -->
+                    El Periódico</div> <!-- Texto visible del elemento de menú -->
+                <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function()
+        {window.open('http://www.publico.es')}">Publico</div>
+                <!-- Elemento de menú con función de abrir enlace al periódico "Publico" -->
+            </div>
+        </div>
+        <div data-dojo-type="dijit.PopupMenuBarItem"> <!-- Otro elemento de menú emergente -->
+            <span>Deporte</span> <!-- Texto visible del elemento de menú -->
+            <div data-dojo-type="dijit.DropDownMenu" id="Deportes">
+                <!-- Menú desplegable con identificador "Deportes" -->
+                <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function()
+        {window.open('http://www.coi.es');}">COI</div>
+                <!-- Elemento de menú con función de abrir enlace al sitio web del COI -->
+                <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function()
+        {window.open('http://www.uefa.es')}">Uefa</div>
+                <!-- Elemento de menú con función de abrir enlace al sitio web de la UEFA -->
+                <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function()
+        {window.open('http://www.acb.es')}">ACB</div>
+                <!-- Elemento de menú con función de abrir enlace al sitio web de la ACB -->
+            </div>
+        </div>
+    </div>
+    <script>
+        require(["dojo/parser", "dijit/MenuBar", "dijit/PopupMenuBarItem",
+            "dijit/DropDownMenu", "dijit/MenuItem"]); // Carga de los módulos de Dojo necesarios
+    </script>
+</body>
+
+</html>

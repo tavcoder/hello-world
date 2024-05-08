@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="formulariodojo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"
+        data-dojo-config="parseOnLoad:true, async:true">
+        </script>
+</head>
+
+<body class=”claro”>
+    <div id="apDiv1" style="position: absolute; left: 10px; top: 15px; width: 814px; z-index: 31">
+        <p>RESERVE SU HABITACIÓN</p>
+    </div>
+    <div id="apDiv2" style="position: absolute; left: 15px; top: 48px; width: 811px; z-index: 16;">DATOS PERSONALES
+    </div>
+    <div id="apDiv3" style="position: absolute; left: 15px; top: 77px; width: 92px; z-index: 17;">Nombre:</div>
+    <div id="apDiv4" style="position: absolute; left: 113px; top: 77px; width: 181px; z-index: 18;">
+        <input id="Nombre" style="width: 10em;" data-dojo-type="dijit/form/TextBox" />
+    </div>
+    <div id="apDiv5" style="position: absolute; left: 300px; top: 77px; width: 109px; z-index: 19;">Apellidos:</div>
+    <div id="apDiv6" style="position: absolute; left: 415px; top: 77px; width: 411px; z-index: 20;">
+        <input id="Apellidos" style="width: 25em;" data-dojo-type="dijit/form/TextBox" />
+    </div>
+    <div id="apDiv7" style="position: absolute; left: 15px; top: 106px; width: 92px; z-index: 21; ">Dirección:</div>
+    <div id="apDiv8" style="position: absolute; left: 113px; top: 106px; width: 713px; z-index: 22; ">
+        <input id="Direccion" style="width: 40em;" data-dojo-type="dijit/form/TextBox" />
+    </div>
+    <div id="apDiv9" style="position: absolute; left: 15px; top: 136px; width: 92px; z-index: 23;">Población</div>
+    <div id="apDiv10" style="position: absolute; left: 113px; top: 136px; width: 181px; z-index: 24;">
+        <input id="Poblacion" style="width: 10em;" data-dojo-type="dijit/form/TextBox" />
+    </div>
+    <div id="apDiv11" style="position: absolute; left: 300px; top: 136px; width: 109px; z-index: 25;">Provincia:</div>
+    <div id="apDiv12" style="position: absolute; left: 415px; top: 136px; width: 411px; z-index: 26;">
+        <select data-dojo-type="dijit/form/ComboBox" id="Provincia">
+            <option>Girona</option>
+            <option selected>Barcelona</option>
+            <option>Lleida</option>
+            <option>Tarragona</option>
+        </select>
+    </div>
+    <div id="apDiv13" style="position: absolute; left: 15px; top: 164px; width: 92px; z-index: 27;">Teléfono:</div>
+    <div id="apDiv14" style="position: absolute; left: 113px; top: 164px; width: 181px; z-index: 28;">
+        <input id="telefono" style="width: 10em;
+        " data-dojo.type="dijit/form/NumberTextBox" data-dojo-props="constraints:{ min:0, max:999999999 },
+        invalidMessage:'Sólo datos numéricos'" />
+    </div>
+    <div id="apDiv15" style="position: absolute; left: 300px; top: 164px; width: 109px; z-index: 29;">E-Mail:</div>
+    <div id="apDiv16" style="position: absolute; left: 415px; top: 164px; width: 411px; z-index: 30;">
+        <input id="EMail" style="width:  15em;" data-dojo-type="dijit/form/TextBox" />
+    </div>
+
+    <div id="apDiv17" style="position: absolute; left: 15px; top: 222px; width: 811px; z-index: 3;">DATOS DE LA RESERVA
+    </div>
+    <div id="apDiv18" style="position: absolute; left: 15px; top: 256px; width: 108px; z-index: 4;">Nº Hab.:</div>
+    <div id="apDiv19" style="position: absolute; left: 129px; top: 256px; width: 165px; z-index: 5;">
+        <input id="habitacion" style="width: 10em;
+        " data-dojo.type="dijit/form/NumberTextBox" data-dojo-props="constraints:{ min:1, max:45 },
+        invalidMessage:'Sólo habitaciones entre 1 y 45'" />
+    </div>
+    <div id="apDiv20" style="position: absolute; left: 300px; top: 256px; width: 120px; z-index: 6;">Tipo:</div>
+    <div id="apDiv21" style="position: absolute; left: 425px; top: 256px; width: 399px; z-index: 7;">
+        <select data-dojo-type="dijit/form/ComboBox" id="Provincia">
+            <option>Doble</option>
+            <option selected> Individual</option>
+            <option>Triple</option>
+        </select>
+    </div>
+    <div id="apDiv22" style="position: absolute; left: 15px; top: 286px; width: 108px; z-index: 8;">Fecha Entrada:</div>
+    <div id="apDiv23" style="position: absolute; left: 129px; top: 286px; width: 165px; z-index: 9;">
+        <input id="FechaE" style="width: 7em;" data-dojo-type="dijit/form/DateTextBox" required/></div>
+    <div id="apDiv24" style="position: absolute; left: 300px; top: 286px; width: 120px; z-index: 10;">Fecha Salida:
+    </div>
+    <div id="apDiv25" style="position: absolute; left: 425px; top: 286px; width: 399px; z-index: 11;">
+        <input id="FechaS" style="width: 7em;" data-dojo-type="dijit/form/DateTextBox" required/></div>
+    <div id="apDiv26" style="position: absolute; left: 15px; top: 317px; width: 108px; z-index: 12; ">Regimen:</div>
+    <div id="apDiv27" style="position: absolute; left: 129px; top: 317px; width: 165px; z-index: 13; ">
+        <select data-dojo-type="dijit/form/ComboBox" id="Provincia" style="width: 10em;">
+            <option>Solo alojamiento</option>
+            <option selected>Alojamiento y desayuno</option>
+            <option>Media pensión</option>
+            <option>Pensión completa</option>
+        </select>
+    </div>
+    <div id="apDiv28" style="position: absolute; left: 300px; top: 317px; width: 120px; z-index: 14; ">Hora de entrada:
+    </div>
+    <div id="apDiv29" style="position: absolute; left: 425px; top: 317px; width: 399px; z-index: 15; ">
+        <input id="Hora" style="width: 7em;" data-dojo-type="dijit/form/TimeTextBox" required/></div>
+
+    <div id="apDiv30" style="position: absolute; left: 15px; top: 403px; width: 811px; z-index: 1; ">OBSERVACIONES</div>
+    <div id="apDiv31" style="position: absolute; left: 15px; top: 428px; width: 811px; z-index: 2; ">14</div>
+
+    <script>
+        require(["dojo/parser", "dijit/form/TextBox", "dijit/form/NumberTextBox",
+            "dijit/form/ComboBox", "dijit/form/DateTextBox", "dijit/form/TimeTextBox"]);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hide con Jquery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>        
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <style>
+            #CajaEfecto {
+                width: 100px;
+                height: 100px;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Haga Clic en la caja para activar el Efecto Hide.</p>
+        <div id="CajaEfecto" onclick="$('#CajaEfecto').hide('blind');"></div>
+        <div id="CajaEfecto2" onclick="$('#CajaEfecto2').hide('blind',{direction:'left'}, 2000);" style="width: 100px; height: 100px; background: red;"></div>
+    </body>    
+</html>

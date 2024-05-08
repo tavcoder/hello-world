@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Biografía de Leopold Mozart</title> <!-- Título de la página -->
+    <meta charset="UTF-8"> <!-- Especificación del conjunto de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista para dispositivos móviles -->
+    <!-- Carga de la biblioteca Dojo -->
+    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"
+        data-dojo-config="parseOnLoad:true, async:true"></script>
+    <!-- Carga de la hoja de estilos del tema Claro de Dojo -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css">
+</head>
+
+<body class="claro"> <!-- Clase de estilo para el cuerpo de la página -->
+    <script>
+        require(["dojo/parser", "dijit/layout/AccordionContainer",
+            "dijit/layout/ContentPane"]); // Carga de los módulos de Dojo necesarios
+    </script>
+    <!-- Contenedor principal con el estilo de acordeón -->
+    <div style="width: 300px; height: 425px">
+        <!-- Contenedor de las fichas de contenido -->
+        <div data-dojo-type="dijit/layout/AccordionContainer" style="height: 425px;">
+            <!-- Ficha de contenido para la biografía -->
+            <div data-dojo-type="dijit/layout/ContentPane" title="Biografía">
+                <h1>Leopold Mozart</h1> <!-- Título de la biografía -->
+                <p>Johann Georg Leopold Mozart nació el 14 de noviembre de 1719 en Augsburgo
+                    (Sacro Imperio Romano Germánico, actual Alemania), hijo de Johann Georg
+                    Mozart (1679-1736), un encuadernador, y su segunda esposa Anna Maria
+                    Sulzer (1696-1766). Desde temprana edad cantó como niño de Coro [de
+                    Iglesia].</p> <!-- Párrafo de la biografía -->
+                <p>Estudió en una escuela Jesuita local, el St. Salvator Gymnasium, donde
+                    estudió lógica, ciencia y teología graduándose magna cum laude en 1735.
+                    Entonces pasó a una escuela más avanzada, St. Salvator Lyceum. Ingresó en
+                    la universidad de Salzburgo en 1737 y estudió Filosofía y Derecho.
+                    Como consecuencia de sus reiteradas faltas fue expulsado de dicha
+                    universidad en 1739.</p> <!-- Párrafo de la biografía -->
+            </div>
+            <!-- Ficha de contenido para la imagen -->
+            <div data-dojo-type="dijit/layout/ContentPane" title="Imagen" selected>
+                <img src="graficos/Mozart.jpg" alt="Retrato de Leopold Mozart"> <!-- Imagen de la ficha -->
+            </div>
+            <!-- Ficha de contenido para las composiciones -->
+            <div data-dojo-type="dijit/layout/ContentPane" title="Composiciones">
+                <p>Compuso, entre otras, las siguientes sinfonías:</p> <!-- Párrafo de las composiciones -->
+                <ul> <!-- Lista de composiciones -->
+                    <li>Die Bauernhochzeit (Bodas campesinas)</li> <!-- Elemento de la lista -->
+                    <li>Musikalische Schlittenfahrt (Viaje musical en trineo)</li> <!-- Elemento de la lista -->
+                    <li>Sinfonía Burlesca</li> <!-- Elemento de la lista -->
+                </ul>
+                <p>Además escribió juegos de acción, conciertos, música de cámara, canciones,
+                    cantatas y misas. Se le atribuye la autoría de la Sinfonía de los
+                    juguetes.</p> <!-- Párrafo de las composiciones -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

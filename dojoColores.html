@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"
+        data-dojo-config="parseOnLoad:true, async:true"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css">
+</head>
+
+<body class="claro">
+    <script>
+        require(["dojo/parser", "dijit/ColorPalette"]);
+    </script>
+    <h3>Seleccione un color:</h3>
+    <div data-dojo-type="dijit/ColorPalette" data-dojo-props="onChange:function(){alert(this.value);}, palette:'7x10'">
+    </div>
+</body>
+
+</html>

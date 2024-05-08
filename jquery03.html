@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo JQuery - Efectos Pulsate y Highlight</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script>
+        function publicidad() {
+            $(".titulo").effect("pulsate", { times: 5 }, 3000);
+            $("#mensaje").effect("highlight", {color:"#669966"}, 3000 );
+        }
+    </script>
+</head>
+
+<body onload="publicidad()">
+    <h1 class="titulo">Nuevas Ofertas!!!</h1>
+    <h3 id="mensaje">Visite nuestra web para ver los nuevos productos</h3>
+</body>
+
+</html>

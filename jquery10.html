@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Ejemplo JQuery - Efectos Size y Scale</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script>
+        function animar() {
+            $("#imagen").effect("shake", {times:5, distance:30, direction:'down'}, 1000);
+        }
+    </script>
+</head>
+
+<body onload="animar()">
+    <div id="Capa1" style="background-color: red; width: 220px; height: 300px">
+        <img src="graficos/Mozart.jpg" id="imagen">
+    </div>
+</body>
+
+</html>

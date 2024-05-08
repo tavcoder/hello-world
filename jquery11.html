@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Efectos con jQuery - Show y Hide</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script>
+        $(document).ready(function () {
+            $("#ocultar").click(function (event) {
+                event.preventDefault();
+                $("#capaefectos").hide("slow");
+            });
+            $("#mostrar").click(function (event) {
+                event.preventDefault();
+                $("#capaefectos").show(3000, { complete: cambiofoto() });
+            });
+        });
+        function cambiofoto() {
+            document.getElementById('imagen').src = 'graficos/Mozart2.jpg';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="capaefectos" style="background-color: #cc7700; color:fff; padding:10px;">
+        Esto es una capa que nos servirá para hacer efectos de Mostrar e Ocultar!
+        <br><br>
+        <img src="graficos/Mozart.jpg" id="imagen" height="330" width="220">
+    </div>
+    <p>
+        <a href="http://www.google.es" id="ocultar">Ocultar la capa</a>|
+        <a href="#" id="mostrar">Mostrar la capa</a>
+    </p>
+</body>
+
+</html>

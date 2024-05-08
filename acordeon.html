@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/humanity/jquery-ui.css">
+    <script>
+        $(document).ready(function () {
+            $('#capaacordeon').accordion({ active: 1, event: 'mouseenter', fillSpace: true });
+        });
+    </script>
+    <style>
+        #capaacordeon {
+            height: 300px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="capaacordeon">
+        <h3>La Batalla del Nilo</h3>
+        <div>
+            <p>La Batalla del nilo fue un gran combate naval librado entre la Marina
+                Real británica y la Marina de la Primera República Francesa en la
+                bahía de Abu Qir, en la costa mediterránea de Egipto, del 1 al 3 de
+                agosto de 1798.</p>
+            <p> En la batalla, las fuerzas inglesas, dirigidas por el contraalmirante
+                lord Nelson, derrotaron a las francesas de Napoleón Bonaparte.</p>
+        </div>
+        <h3>La Batalla de Inglaterra</h3>
+        <div>
+            <p>La batalla de Inglaterra es el nombre con el que se conoce al conjunto
+                de combates aéreos librados en cielo británico y sobre el canal de la
+                Mancha, entre julio y octubre de 1940, cuando Alemania buscó destruir a
+                la Royal Air Force (RAF) para obtener la superioridad aérea necesaria
+                para una invasión de Gran Bretaña.</p>
+        </div>
+        <h3>Destacados</h3>
+        <div>
+            <p>Otras batallas historicas destacadas:</p>
+            <ul>
+                <li><a href="http://es.wikipedia.org/wiki/Batalla_de_Waterloo">Waterloo</a></li>
+                <li><a href="http://es.wikipedia.org/wiki/Batalla_de_Stalingrado">Stalingado</a></li>
+                <li><a href="http://es.wikipedia.org/wiki/Batalla_de_las_Term%C3%B3pilas">Termópilas
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

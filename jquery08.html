@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Ejemplo JQuery - Efecto Fade y Fold</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script>
+        function animar() {
+            $("#Capa1").hide("fade", 2000);
+        }
+        function animar2() {
+            $("#Capa2").hide("fold", { horizFirst: false, size: 30 }, 2000);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="Capa1" style="background-color: orange; width: 200px;
+height: 200px; top:10px; left:20px; float:left;" onclick="animar()">
+        <h3>Capa 1</h3>
+    </div>
+    <div id="Capa2" style="background-color: royalblue; width: 200px;
+height: 200px; top:10px; left:20px; float:left;" onclick="animar2()">
+        <h3>Capa 2</h3>
+    </div>
+</body>
+
+</html>

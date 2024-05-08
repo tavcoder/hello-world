@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo JQuery - Efecto Blind</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        #CajaEfecto {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Haga Clic en la caja para activar el Efecto Blind.</p>
+    <div id="CajaEfecto" onclick="$('#CajaEfecto').effect('blind');"></div>
+    <div id="CajaEfecto2" onclick="$('#CajaEfecto2').toggle('blind',{direction: 'left'}, 100);" style="width:
+100px; height: 100px; background: red;"></div>
+</body>
+
+</html>

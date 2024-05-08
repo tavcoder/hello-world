@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo JQuery - Efecto Slide</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script>
+        function animar() {
+            $("#Capa1").hide("slide", { direction: "down" }, 2000);
+        }
+    </script>
+</head>
+
+<body onload="animar()">
+    <div id="Capa1" style="background-color: orange; width: 200px; height: 200px;
+top:10px; left:20px; float:left;">
+        <h3>Capa 1</h3>
+    </div>
+</body>
+
+</html>
