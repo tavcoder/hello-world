@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 3px;
+            text-align: center;
+        }
+
+        th {
+            font-weight: bold;
+            background-color: #E6E6E6;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="myButton">Selecciona</button>
+    <div id="calendar"></div>
+
+    <script>
+        const now = new Date();
+        const year = now.getFullYear();
+        var mes;
+        const meses = [
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        ];
+        const button = document.getElementById('myButton');
+        button.addEventListener('click', seleccionarMes);
+
+        function seleccionarMes() {
+            mes = prompt("Inserte el mes");
+            console.log("Mes seleccionado:", mes);
+            // Crear el calendario después de que el usuario seleccione el mes
+            createCalendar(calendar, year, mes);
+        }
+        function getDay(date) { // Obtiene el número de día desde 0 (lunes) a 6 (domingo)
+            let day = date.getDay();
+            if (day === 0) day = 7; // Hacer domingo (0) el último día
+            return day - 1;
+        }
+
+        function createCalendar(elem, year, month) {
+            let mon = month ? month - 1 : now.getMonth(); // Si no se proporciona un mes, usar el mes actual
+            let firstMonthDay = new Date(year, mon);//el primer día del mes y año dados
+            let days = ["L", "M", "M", "J", "V", "S", "D"]; // Array con los nombres de los días
+            let table = '<table><tr>'; // Inicio de la tabla
+
+            // Agregar la primera celda de la columna 1
+            table += `<th>` + meses[mon] + `</button></th>`;
+
+            // Agregar los encabezados de los días de la semana
+            let blanckDay = getDay(firstMonthDay);
+            let totalDays = new Date(year, mon, 0).getDate();
+            let k = 0 - blanckDay; 
+            
+            while (k <= totalDays) {
+                for (let i = 0; i < days.length && k <= totalDays; i++) {
+                    table += `<th>${days[i]}</th>`;
+                    k++;
+                }
+            }
+            table += '</tr>'; // Cerrar la fila de encabezados
+
+            // Agregar la celda "trabajadores" en la segunda fila de la columna 1
+            table += '<tr>';
+            table += `<td>Trabajadores</td>`;
+            // Espacios en la primera línea
+            // Desde lunes hasta el primer día del mes
+            for (let i = 0; i < blanckDay; i++) {
+                table += '<td></td>';
+            }
+            // Iterar a través de todos los días del mes
+            while (firstMonthDay.getMonth() == mon) {
+                // Imprimir el número del día
+
+                table += `<td>${firstMonthDay.getDate()}</td>`;
+                firstMonthDay.setDate(firstMonthDay.getDate() + 1);
+            }
+            // Cerrar la fila
+            table += '</tr>';
+
+            table += '<tr>';
+            table += `<td>Trabajador 1</td>`;
+            // Espacios en la primera línea
+            // Desde lunes hasta el primer día del mes
+            for (let i = 0; i < blanckDay; i++) {
+                table += '<td></td>';
+            }
+            // Iterar a través de todos los días del mes
+            for (let i = 0; i <= totalDays; i++) {
+                table += `<td>CV</td>`;
+            }
+            // Cerrar la fila
+            table += '</tr>';
+
+
+            table += '</table>';
+
+            // Agregar la tabla al elemento HTML
+            elem.innerHTML = table;
+        }
+
+
+
+        const calendar = document.getElementById('calendar');
+        createCalendar(calendar, year, mes); // Crear el calendario con el mes actual al cargar la página
+    </script>
+
+</body>
+
+</html>
